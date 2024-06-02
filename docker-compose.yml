@@ -1,0 +1,23 @@
+version: '4'
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server:7.0.3-ubuntu2204-20240323T084243Z
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: product_mdb_dev
+    volumes:
+      - ./data/mongodb:/docker/mongodb/data
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql

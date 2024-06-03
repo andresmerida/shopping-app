@@ -7,9 +7,11 @@ import org.adk.shopping.order.dto.OrderRequest;
 import org.adk.shopping.order.repository.OrderRepository;
 import org.adk.shopping.order.service.OrderService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final InventoryClient inventoryClient;

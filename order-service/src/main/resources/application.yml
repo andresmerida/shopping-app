@@ -13,3 +13,6 @@ spring:
     show-sql: true
   flyway:
     locations: classpath:db/migration
+
+inventory:
+  url: http://localhost:8083

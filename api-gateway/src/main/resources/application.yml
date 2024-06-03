@@ -1,0 +1,10 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: api-gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8181/realms/shopping-app-security-realm

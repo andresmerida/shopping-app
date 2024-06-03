@@ -1,0 +1,1 @@
+package org.adk.shopping.inventory.web;
